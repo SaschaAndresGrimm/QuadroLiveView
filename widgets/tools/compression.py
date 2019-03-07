@@ -1,5 +1,5 @@
 import logging
-import lz4.block, bitshuffle
+import lz4.block
 import numpy as np
 import struct
 
@@ -12,7 +12,8 @@ def decompress(frame, shape, dtype, encoding, verbose=False):
     if encoding == "lz4<":
         data = readLZ4(frame, shape, dtype)
     elif "bs" in encoding:
-        data = readBSLZ4(frame, shape, dtype)
+        #data = readBSLZ4(frame, shape, dtype)
+        logging.error("BSLZ4 compression not implemented.")
     else:
         msg = "decoding {} is not implemented".format(info["encoding"])
         logging.error(msg)

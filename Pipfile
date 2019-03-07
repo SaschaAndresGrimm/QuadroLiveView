@@ -12,7 +12,6 @@ qdarkstyle = "*"
 requests = "*"
 zmq = "*"
 lz4 = "*"
-bitshuffle = {editable = true,git = "git+https://github.com/kiyo-masui/bitshuffle.git"}
 tifffile = "*"
 pandas = "*"
 pipfile = {editable = true,version = "*"}
